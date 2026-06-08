@@ -183,6 +183,22 @@ report.html
 # OS files
 Thumbs.db
 ```
+Indien er al een vooraf gegenereerde .gitignore bestaat (Python), dan hoef je alleen onderstaande nog toe te voegen
+```gitignore
+# Robot Framework
+results/
+output.xml
+log.html
+report.html
+
+# BrowserLibrary / Playwright
+node_modules/
+browser/
+
+# OS files
+.DS_Store
+Thumbs.db
+```
 
 ---
 
