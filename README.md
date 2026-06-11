@@ -46,7 +46,7 @@ robot-framework-flaui/
 
 ## Download Python
 
-👉 https://www.python.org/downloads/
+👉 https://www.python.org/downloads/windows/
 
 ⚠ BELANGRIJK tijdens installatie:
 
