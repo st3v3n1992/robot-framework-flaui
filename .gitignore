@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Robot Framework output
+results/
+output.xml
+log.html
+report.html
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code (optioneel)
+.vscode/
+
+# Test artifacts
+screenshots/

@@ -64,7 +64,7 @@ pip --version
 ---
 
 # 🚀 1. Repository clonen
-
+Voer onderstaand commando uit in de map waar het project in gekloond moet worden.
 ```powershell
 git clone https://github.com/st3v3n1992/robot-framework-flaui.git
 cd robot-framework-flaui
@@ -168,36 +168,47 @@ Maak bestand:
 Voeg toe:
 
 ```gitignore
-# Python
+# Python virtual environments
 .venv/
 venv/
+
+# Python cache
 __pycache__/
 *.pyc
 
-# Robot Framework
+# Robot Framework output
 results/
 output.xml
 log.html
 report.html
 
-# OS files
+# Test artifacts
+screenshots/
+
+# VS Code
+.vscode/
+
+# Windows
 Thumbs.db
+Desktop.ini
 ```
 Indien er al een vooraf gegenereerde .gitignore bestaat (Python), dan hoef je alleen onderstaande nog toe te voegen
 ```gitignore
-# Robot Framework
+# Robot Framework output
 results/
 output.xml
 log.html
 report.html
 
-# BrowserLibrary / Playwright
-node_modules/
-browser/
-
-# OS files
-.DS_Store
+# Windows
 Thumbs.db
+Desktop.ini
+
+# VS Code (optioneel)
+.vscode/
+
+# Test artifacts
+screenshots/
 ```
 
 ---
@@ -224,21 +235,18 @@ mkdir results
 Installeer:
 
 - Python
-- Robot Framework Language Server
+- RobotCode - Robot Framework Support
 
 ---
 
 # 🚀 10. Python interpreter koppelen in VS Code
 
 1. Open projectmap
-2. Open Command Palette
+2. Open Command Palette (ctrl + Shift + P)
 3. Zoek:
    `Python: Select Interpreter`
 4. Kies interpreter uit `.venv`
 
-```text
-.venv\Scripts\python.exe
-```
 
 ---
 
@@ -258,9 +266,13 @@ Library    FlaUILibrary
 
 *** Test Cases ***
 Open Calculator
-    Launch Application    calc.exe
+    Launch Application    notepad.exe
 ```
+Het kan zijn dat "Launch Application" rood onderlijnt is (stap 12 kan worden uitgevoerd en zal werken), om dit weg te halen, doe het volgende:
+1. Ctrl + Shift + P
+2. Developer: Reload Window
 
+Het scherm herlaad opnieuw en de rode onderlijning is verdwenen.
 ---
 
 # 🚀 12. Tests runnen
@@ -296,9 +308,9 @@ Voor Windows desktop automation zijn inspectietools belangrijk.
 
 Veelgebruikte tools:
 
-- Inspect.exe
-- Accessibility Insights
-- FlaUInspect
+- Inspect.exe --> legacy
+- Accessibility Insights --> beste om te gebruiken
+- FlaUInspect --> goed, maar minder gebruiksvriendelijk
 
 Deze helpen bij het vinden van:
 
