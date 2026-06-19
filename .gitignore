@@ -232,3 +232,6 @@ Desktop.ini
 
 # Test artifacts
 screenshots/
+
+# Generated documentation
+flaui.html
